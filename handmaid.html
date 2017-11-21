@@ -1,0 +1,240 @@
+<html>
+    <head>
+        <!-- Latest compiled and minified CSS -->
+        <title>The Handmaid's Tale</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="handmaid.css">
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script src="handmaid.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed" rel="stylesheet">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <a class="navbar-brand" href="http://www.mihsnyc.org/" target="_blank">
+                <img id="brand" alt="Brand" src="mihs.png">
+              </a>
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+            </div>
+        
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav font">
+                <li class="active"><a href="http://www.mihsnyc.org/" target="_blank">MIHS<span class="sr-only">(current)</span></a></li>
+                <li><a href="#paragraph">Essential Paragraph</a></li>
+                <li><a href="#centralIdea">Central Idea</a></li>
+                <li><a href="#vocabulary">Vocabulary</a></li>
+                <li><a href="#literaryElement">Literary Element</a></li>
+                <li><a href="#question">Question</a></li>
+                <li><a onclick="playVid()" type="button" id='playVideo'>Play Video</a></li>
+                <li><a onclick="pauseVid()" type="button" id='pauseVideo'>Pause Video</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+
+        <!-- Video -->
+        <div class="video-container">
+            <video class="video" id="trailer"><!-- Add Autoplay -->
+                <source src="theHandmaidsTale.mp4" type="video/mp4">
+            </video>
+        </div>
+        
+        <div class="overlay"></div>
+            
+        
+        
+        <!-- Title -->
+        <div class="center" id="Title">
+          <br>
+          <img id="book" src='Handmaid.jpg'></img>
+          <h3>By: <a href='http://margaretatwood.ca/' target='_Blank'><strong>Margret Atwood</strong></a></h3>
+          <h1>Chapter 12</h1>
+          <h3>(Page 62-66)</h3>
+        </div>
+        
+        <hr>
+        
+        <!-- Essential Paragraph -->
+        <div id="paragraph">
+            <h2 class="center">Essential Paragraph</h2>
+            <div class="panel panel-default panel-margin">
+              <div class="panel-body" id="essentialParagraphPanel">
+              </div>
+              <nav aria-label="...">
+                <ul class="pager">
+                  <li><a class="button previous" id="EPPrevious">Previous</a></li>
+                  <li><a class="button next" id="EPNext">Next</a></li>
+                </ul>
+              </nav>
+            </div>
+        </div>
+        
+        <hr>
+        
+        <!-- Central Idea -->
+        <div id="centralIdea">
+            <h2 class="center">Central Idea</h2>
+            <h2 class="center">--- Freedom ---</h2>
+            <div class="list-group">
+              <br>
+              <div class="panel panel-default panel-margin">
+              <div class="panel-body">
+                <div class="center"><h3>Proofs</h3></div>
+                <div id="evidence"></div>
+                <nav aria-label="...">
+                <nav aria-label="Page navigation">
+                  <ul class="pager">
+                    <li>
+                      <a aria-label="Previous" class="button" id="eviPrevious">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                    </li>
+                    <li><a class="button" id="evi1">1</a></li>
+                    <li><a class="button" id="evi2">2</a></li>
+                    <li><a class="button" id="evi3">3</a></li>
+                    <li><a class="button" id="evi4">4</a></li>
+                    <li>
+                      <a aria-label="Next" class="button" id="eviNext">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              </div>
+              
+            </div>
+        </div>
+        
+        <hr>
+        
+        <!-- Vocabulary -->
+        <div id="vocabulary">
+            <h2 class="center">Vocabulary</h2>
+            <div class="panel panel-default panel-margin">
+              <div class="panel-body">
+                <div class="center" id="vocabName"></div>
+                <div id="pronunciation">
+                  <button id="pronunciationButton"></button>
+                  <div id="pronunciationVoice">
+                    
+                  </div>
+                </div>
+                <div id="picture"></div>
+                <div id="context"></div>
+                <div id="definition"></div>
+                <hr>
+                <nav aria-label="...">
+                  <ul class="pager">
+                    <li><a class="button" id="pictureButton"></a></li>
+                    <li><a class="button" id="contextButton"></a></li>
+                    <li><a class="button" id="SHDButton"></a></li>
+                  </ul>
+                </nav>
+              <!--  -->
+            <nav aria-label="...">
+              <nav aria-label="Page navigation">
+                <ul class="pager">
+                  <li>
+                    <a aria-label="Previous" class="button" id="vocabPrevious">
+                      <span aria-hidden="true">&laquo;</span>
+                    </a>
+                  </li>
+                  <li><a class="button" id="vocab1">1</a></li>
+                  <li><a class="button" id="vocab2">2</a></li>
+                  <li><a class="button" id="vocab3">3</a></li>
+                  <li><a class="button" id="vocab4">4</a></li>
+                  <li><a class="button" id="vocab5">5</a></li>
+                  <li><a class="button" id="vocab6">6</a></li>
+                  <li>
+                    <a aria-label="Next" class="button" id="vocabNext">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </nav>
+              </div>
+            </div>
+            
+            
+        </div>
+        
+        <hr>
+        
+        <!--Literary Element -->
+        <div id="literaryElement">
+            <h2 class="center">Literary Element</h2>
+            <div class="panel panel-default panel-margin">
+              <div class="panel-body">
+                <div class='center' id='LEType'></div>
+                <div class='center' id='LEQuote'></div>
+              </div>
+              <nav aria-label="Page navigation">
+                <ul class="pager">
+                  <li>
+                    <a aria-label="Previous" class="button" id="LEPrevious">
+                      <span aria-hidden="true">&laquo;</span>
+                    </a>
+                  </li>
+                  <li><a class="button" id="LE1">1</a></li>
+                  <li><a class="button" id="LE2">2</a></li>
+                  <li><a class="button" id="LE3">3</a></li>
+                  <li><a class="button" id="LE4">4</a></li>
+                  <li><a class="button" id="LE5">5</a></li>
+                  <li>
+                    <a aria-label="Next" class="button" id="LENext">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </nav>
+            </div>
+        </div>
+        
+        <hr>
+        
+        <!--Regent's Question-->
+        <div id="question">
+            <h2 class="center">Questions</h2>
+            <div class="panel panel-default panel-margin">
+              <div class="panel-body">
+                <div class="center" id="questionText"></div><hr>
+                <div>
+                  <button type="button" class="list2" id="questionAns1"></button>
+                  <button type="button" class="list2" id="questionAns2"></button>
+                  <button type="button" class="list2" id="questionAns3"></button>
+                  <button type="button" class="list2" id="questionAns4"></button>
+                  <div id="questionVoice"></div>
+                </div>
+              </div>
+              <nav aria-label="...">
+              <ul class="pager">
+                <li><a class="button next" id="questionAnsConfirm">Confirm</a></li>
+                <li><a class="button next" id="questionNext">Next</a></li>
+              </ul>
+            </nav>
+            </div>
+        </div>
+        
+
+    </body>
+</html>

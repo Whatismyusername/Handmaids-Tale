@@ -1,0 +1,272 @@
+* {
+  box-sizing:border-box;
+}[class*="col-"] {
+    float: left;
+}
+
+
+
+h1{
+  font-size:7vw;
+  font-family: 'Saira Extra Condensed', sans-serif;
+}
+h2{
+  font-size:5vw;
+  font-family: 'Saira Extra Condensed', sans-serif;
+}
+h3{
+  font-size:3vw;
+  font-family: 'Saira Extra Condensed', sans-serif;
+}
+h4{
+  font-size:2vw;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  text-indent:3vw;
+}
+hr{
+   display: block;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 2px;
+}
+
+
+/* Responsive */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+
+/* Video Size */
+.video-container {
+  position:absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: hidden;
+}
+.video-container .video {
+  /* Make video to at least 100% wide and tall */
+  min-width: 100%; 
+  min-height: 100%; 
+
+  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+  width: auto;
+  height: auto;
+
+  /* Center the video */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.overlay{
+  height:100%;
+  width:0px;
+}
+
+.center{
+  text-align:center;
+}
+
+.panel-margin{
+  width:50%;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.panelButton{
+  border-radius:100vw;
+  background-color:#ffffff;
+}
+#navbar-font{
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-size:3vw;
+  
+}
+#Title{
+  margin-bottom:10%;
+}
+.penalFont{
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-size:3vw;
+}
+.pageNumber{
+  font-size:2vw;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  text-align:right;
+}
+.list{
+  width:60%;
+  margin-left:20%;
+  margin-right:20%;
+  font-size:2vw;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  background-color:rgba( 255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius:0.5vw;
+  text-align:left;
+  text-indent:3vw;
+}
+#proofIndent{
+  text-indent:9vw;
+}
+#brand{
+  height:100%;
+}
+.pagination{
+  margin-left:auto;
+  margin-right:auto;
+}
+.width100{
+  width:100%;
+}
+.button{
+  font-size:2vw;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  cursor:pointer;
+}
+.bold{
+  font-weight:bold;
+}
+#pronunciation{
+  width:3vw;
+  height:3vw;
+  margin-left:auto;
+  margin-right:auto;
+}
+#pronunciationButton{
+  height:100%;
+  width:100%;
+  background-color:rgb(255, 255, 255);
+  border-radius:1vw;
+  background-image:url('volume.png');
+  background-size:100% 100;
+}
+.onButton{
+  animation:onButton 2s infinite;
+}
+@keyframes onButton{
+  0%{
+    background-color:#ffffff;
+  }
+  50%{
+    background-color:#b3b3b3;
+  }
+  100%{
+    background-color:#ffffff;
+  }
+}
+.vocabWord{
+  animation:vocabWord 3s infinite;
+}
+@keyframes vocabWord{
+  0%{
+    color:#000000;
+  }
+  50%{
+    color:#ff3300;
+  }
+  100%{
+    color:#000000;
+  }
+}
+#picture{
+  height:7vw;
+  width:7vw;
+  background-size:100% 100%;
+  margin-top:1vw;
+  margin-left:auto;
+  margin-right:auto;
+  border-radius:2vw;
+}
+.list2{
+  width:90%;
+  margin-left:5%;
+  margin-right:5%;
+  font-size:2vw;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  background-color:rgba( 255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius:0.5vw;
+  text-align:left;
+  text-indent:3vw;
+}
+.answer{
+  border-radius:20vw;
+  background-color:rgba(204, 255, 255, 0.5);
+  animation:answer 4s infinite;
+}
+@keyframes answer{
+  0%{
+    margin-left:0%;
+    margin-right:10%;
+    border-color:rgb(0, 0, 0);
+    border-width:0.2vw;
+  }
+  25%{
+    border-color:rgb(255, 255, 0);
+  }
+  50%{
+    margin-left:10%;
+    margin-right:0%;
+    border-color:rgb(0, 0, 0);
+    border-width:0.2vw;
+  }
+  75%{
+    border-color:rgb(255, 255, 0);
+  }
+  100%{
+    margin-left:0%;
+    margin-right:10%;
+    border-color:rgb(0, 0, 0);
+    border-width:0.2vw;
+  }
+}
+.wrongAns{
+  animation:wrongAns 4s infinite;
+}
+@keyframes wrongAns{
+  0%{
+    background-color:rgba(255, 0, 0, 0.8);
+  }
+  50%{
+    background-color:rgba(255, 0, 0, 0.5);
+  }
+  100%{
+    background-color:rgba(255, 0, 0, 0.8);
+  }
+}
+.rightAns{
+  animation:rightAns 4s infinite;
+}
+@keyframes rightAns{
+  0%{
+    background-color:rgba(0, 255, 0, 0.8);
+  }
+  50%{
+    background-color:rgba(0, 255, 0, 0.5);
+  }
+  100%{
+    background-color:rgba(0, 255, 0, 0.8);
+  }
+}
+#book{
+  max-height:50%;
+  width: auto;
+  height: auto;
+}
